@@ -1,3 +1,8 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/aellwein/slf4go-zap-adaptor)](https://goreportcard.com/report/github.com/aellwein/slf4go-zap-adaptor)
+[![Coverage Status](https://img.shields.io/coveralls/github/aellwein/slf4go-zap-adaptor/master.svg)](https://coveralls.io/github/aellwein/slf4go-zap-adaptor?branch=master)
+[![Build Status](https://img.shields.io/travis/aellwein/slf4go-native-adaptor/master.svg)](https://travis-ci.org/aellwein/slf4go-native-adaptor) 
+
+
 
 # Zap adaptor for SLF4GO
 
