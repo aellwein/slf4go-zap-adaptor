@@ -9,14 +9,23 @@ import (
 
 type zapLoggerFactory struct {
 	logger *zap.Logger
+	level  slf4go.LogLevel
 }
 
 // Creates by default a production sugared logger
 func (f *zapLoggerFactory) GetLogger(name string) slf4go.Logger {
 	logger := &zapLogger{}
 	logger.sugar = f.logger.Sugar()
-	logger.LoggerAdaptor.SetLevel(slf4go.LevelInfo)
+	logger.LoggerAdaptor.SetLevel(f.level)
 	return logger
+}
+
+func (f *zapLoggerFactory) SetDefaultLogLevel(lvl slf4go.LogLevel) {
+	f.level = lvl
+}
+
+func (f *zapLoggerFactory) GetDefaultLogLevel() slf4go.LogLevel {
+	return f.level
 }
 
 type zapLogger struct {
@@ -111,7 +120,7 @@ func (l *zapLogger) Panicf(format string, args ...interface{}) {
 }
 
 func newZapLoggerFactory() slf4go.LoggerFactory {
-	factory := &zapLoggerFactory{}
+	factory := &zapLoggerFactory{level: slf4go.LevelInfo}
 	factory.logger, _ = zap.NewProduction()
 	return factory
 }

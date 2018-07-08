@@ -155,3 +155,14 @@ func TestZapLogger_Development(t *testing.T) {
 	logger := slf4go.GetLogger("test")
 	logger.Infof("test: %d", 42)
 }
+
+func TestZapLoggerFactory_GetDefaultLogLevel(t *testing.T) {
+	assert.Equal(t, slf4go.GetLoggerFactory().GetDefaultLogLevel(), slf4go.LevelInfo)
+}
+
+func TestZapLoggerFactory_SetDefaultLogLevel(t *testing.T) {
+	slf4go.GetLoggerFactory().SetDefaultLogLevel(slf4go.LevelTrace)
+	logger := slf4go.GetLogger("test")
+	assert.True(t, logger.IsTraceEnabled())
+
+}
