@@ -3,6 +3,7 @@ package slf4go_zap_adaptor
 import (
 	"errors"
 	"fmt"
+
 	"github.com/aellwein/slf4go"
 	"go.uber.org/zap"
 )
