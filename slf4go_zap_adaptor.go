@@ -152,7 +152,7 @@ func (f *zapLoggerFactory) SetLoggingParameters(params slf4go.LoggingParameters)
 				f.logger = f.logger.With(fields...)
 			}
 		default:
-			return errors.New(fmt.Sprintf("unsupported parameter: %v", k))
+			return fmt.Errorf("unsupported parameter: %v", k)
 		}
 	}
 	return nil
