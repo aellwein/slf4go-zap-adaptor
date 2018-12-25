@@ -46,6 +46,4 @@ This adaptor supports several parameters, available with ``SetLoggingParameters`
 
 # Development
 
-* Install [Dep](https://github.com/golang/dep) tool.
-* Type ``dep ensure``, so that all vendored packages can be fetched.
 * use ``go build ./...`` as usual.
