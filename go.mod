@@ -9,10 +9,11 @@ require (
 	github.com/smartystreets/goconvey v0.0.0-20190330032615-68dc04aab96a // indirect
 	github.com/stretchr/objx v0.2.0 // indirect
 	github.com/stretchr/testify v1.4.0
-	go.uber.org/zap v1.12.0
+	go.uber.org/multierr v1.4.0 // indirect
+	go.uber.org/zap v1.13.0
 	golang.org/x/sys v0.0.0-20190429190828-d89cdac9e872 // indirect
 	golang.org/x/text v0.3.2 // indirect
-	golang.org/x/tools v0.0.0-20191031220737-6d8f1af9ccc0 // indirect
+	golang.org/x/tools v0.0.0-20191116214431-80313e1ba718 // indirect
 )
 
 go 1.13
